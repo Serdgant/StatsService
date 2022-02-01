@@ -13,11 +13,9 @@ public class StatsService {
     }
 
     public int calculateAverage(int[] sales) { // Сердняя сумма продаж в месяце.
-        int sum = 0;
-        for (int sale : sales) {
-            sum = sum + sale;
-        }
-        return sum / sales.length;
+
+        return calculateSum(sales)/sales.length;
+
 
 
         // return calculateSum(sales) / sales.length;

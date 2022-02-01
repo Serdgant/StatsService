@@ -65,7 +65,7 @@ class StatsServiceTest {   // Сумма всех продаж.
         StatsService service=new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expected =5;
-        int actual =service.calculateLowMonthlyAverage(sales);
+        int actual =service.TheNumberOfMonthsOnSaleWasAboveAverage(sales);
         assertEquals(expected,actual);
 
     }
