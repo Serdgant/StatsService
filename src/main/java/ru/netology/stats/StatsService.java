@@ -14,11 +14,11 @@ public class StatsService {
 
     public int calculateAverage(int[] sales) { // Сердняя сумма продаж в месяце.
 
-        return calculateSum(sales)/sales.length;
+        return avereng(sales);
+    }
 
-
-
-        // return calculateSum(sales) / sales.length;
+    private int avereng(int[] sales) {
+        return calculateSum(sales) / sales.length;
     }
 
 
@@ -52,29 +52,27 @@ public class StatsService {
         return minMonth + 1;
     }
 
-    public int calculateLowMonthlyAverage (int[] sales) {   //Кол-во месяцев, в продаже было два раза ниже среднего
+
+    public int calculateLowMonthlyAverage(int[] sales) {   //Кол-во месяцев, в продаже было два раза ниже среднего
         int month = 0;
         for (int sale : sales) {
-            if (sale > calculateAverage(sales)) {
+            if (sale > avereng(sales)) {
                 month = month + 1;
             }
         }
-        return month ;
+        return month;
 
     }
 
-    public int TheNumberOfMonthsOnSaleWasAboveAverage(int[] sales){  //Кол-во месяцев в продаже было выше среднего
+    public int TheNumberOfMonthsOnSaleWasAboveAverage(int[] sales) {  //Кол-во месяцев в продаже было выше среднего
         int month = 0;
         for (int sale : sales) {
-            if (sale < calculateAverage(sales)) {
+            if (sale < avereng(sales)) {
                 month = month + 1;
             }
         }
-        return month ;
+        return month;
     }
-
-
-
 
 
 }
