@@ -54,7 +54,7 @@ public class StatsService {
     public int calculateLowMonthlyAverage(int[] sales) {   //Кол-во месяцев, в продаже было два раза ниже среднего
         int month = 0;
         for (int sale : sales) {
-            if (sale > calculateAverage(sales)) {
+            if (sale > 15) {
                 month = month + 1;
             }
         }
@@ -65,7 +65,7 @@ public class StatsService {
     public int TheNumberOfMonthsOnSaleWasAboveAverage(int[] sales) {  //Кол-во месяцев в продаже было выше среднего
         int month = 0;
         for (int sale : sales) {
-            if (sale < calculateAverage(sales)) {
+            if (sale < 15) {
                 month = month + 1;
             }
         }
